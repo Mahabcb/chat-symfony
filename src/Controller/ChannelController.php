@@ -34,7 +34,7 @@ class ChannelController extends AbstractController
             $this->entityManager->persist($channel);
             $this->entityManager->flush();
 
-            return $this->redirectToRoute('channel', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('new_channel', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->render('chat/new.html.twig', [
