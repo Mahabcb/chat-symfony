@@ -19,11 +19,6 @@ symfony new 'nom_du_projet'
 symfony new 'nom_du_projet' --webapp
 ````
 
-- Lancer le serveur web Symfony
-````
-symfony serve -d
-````
-
 - Liste des commandes exécutables :
 
 ````
@@ -50,6 +45,11 @@ symfony console make:docker:database
 docker-compose up -d  
 `````
 
+- Lancer le serveur web Symfony
+````
+symfony serve -d
+````
+
 - Créer la base de donnée :
 `````
 symfony console doctrine:database:create
@@ -68,4 +68,14 @@ composer require profiler
 - Nettoyer le cache:
 ````
 symfony console cache:clear 
+````
+
+- Générer des migrations (avec les requetes sql à effectuer)
+````
+symfony console make:migration
+````
+
+- Migrer dans la base de données (executer les requetes écrite dans le fichier de migrations)
+````
+symfony console doctrine:migration:migrate
 ````

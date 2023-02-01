@@ -14,7 +14,7 @@ final class Version20230201112545 extends AbstractMigration
 {
     public function getDescription(): string
     {
-        return '';
+        return 'Create Tables for Channel and Message';
     }
 
     public function up(Schema $schema): void
