@@ -35,9 +35,24 @@ symfony console
 composer require --dev symfony/maker-bundle
 `````
 
-- Télécharger l'ORM doctrine :
+- Télécharger l'ORM doctrine (abstraction sql pour base de donnée) :
 `````
-composer require orm      
+composer require orm
+`````
+
+- Créer une database avec docker :
+````
+symfony console make:docker:database   
+````
+
+- lancer la database docker :
+`````
+docker-compose up -d  
+`````
+
+- Créer la base de donnée :
+`````
+symfony console doctrine:database:create
 `````
 
 - Générer des entités :
@@ -45,3 +60,12 @@ composer require orm
 symfony console make:entity
 `````
 
+- Ajouter le profiler symfony :
+````
+composer require profiler
+````
+
+- Nettoyer le cache:
+````
+symfony console cache:clear 
+````
