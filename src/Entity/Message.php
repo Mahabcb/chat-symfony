@@ -24,6 +24,11 @@ class Message
     #[ORM\JoinColumn(nullable: false)]
     private ?Channel $channel = null;
 
+    public function __construct()
+    {
+        $this->createdAt = new \DateTime("Europe/Paris");
+    }
+
     public function getId(): ?int
     {
         return $this->id;
